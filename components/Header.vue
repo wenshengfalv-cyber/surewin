@@ -1,9 +1,11 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { computed, ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { PHONE_NUMBER } from '../constant/text';
 
 const { t, locale } = useI18n()
+const route = useRoute()
 const mobileMenuOpen = ref(false)
 
 // Use the locale meta composable to update meta tags based on locale
@@ -25,12 +27,11 @@ const navLinks = computed(() => [
 
 const toggleLangLink = computed(() => {
   const newLang = locale.value === 'en' ? 'zh' : 'en'
-  const pathWithoutLang = useRoute().path.replace(/^\/(zh|en)/, '')
+  const pathWithoutLang = route.path.replace(/^\/(zh|en)/, '')
   return `/${newLang}${pathWithoutLang}`
 })
 
 const isLinkActive = (path) => {
-  const route = useRoute()
   // Handle the special case for the home page link
   if (path === '/') {
     return route.path === `/${locale.value}` || route.path === `/${locale.value}/`
@@ -52,9 +53,9 @@ const closeMobileMenu = () => {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo/Brand -->
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 min-w-0">
           <NuxtLink :to="`/${locale}`" class="block">
-            <h1 class="text-2xl font-bold text-blue-900">{{ t('footer.companyName') }}</h1>
+            <h1 class="text-2xl font-bold text-blue-900 truncate">{{ t('footer.companyName') }}</h1>
             <p class="text-xs text-gray-600">{{ t('common.legalServices') }}</p>
           </NuxtLink>
         </div>
@@ -73,20 +74,22 @@ const closeMobileMenu = () => {
         </nav>
 
         <!-- Language Switcher & Phone & Mobile Menu Button -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-3">
           <NuxtLink
             :to="toggleLangLink"
-            class="px-3 py-1 text-sm font-medium rounded-md bg-blue-100 text-blue-900 hover:bg-blue-200 transition-colors"
+            class="hidden sm:inline-flex px-3 py-1 text-sm font-medium rounded-md bg-blue-100 text-blue-900 hover:bg-blue-200 transition-colors"
           >
             {{ t('common.toggleLang') }}
           </NuxtLink>
-          <a :href="`tel:${PHONE_NUMBER}`" class="hidden sm:inline-block text-blue-900 font-semibold hover:text-blue-700 transition-colors">
+          <a :href="`tel:${PHONE_NUMBER}`" class="hidden sm:inline-flex text-blue-900 font-semibold hover:text-blue-700 transition-colors text-sm">
             {{ PHONE_NUMBER }}
           </a>
           <!-- Mobile Menu Button -->
           <button
             @click="toggleMobileMenu"
-            class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+            class="p-2 rounded-md md:hidden text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            :aria-expanded="mobileMenuOpen"
+            aria-label="Toggle navigation menu"
           >
             <svg
               class="w-6 h-6"
@@ -118,6 +121,18 @@ const closeMobileMenu = () => {
         v-if="mobileMenuOpen"
         class="md:hidden border-t border-gray-200 bg-white"
       >
+        <div class="px-4 py-4 border-b border-gray-200 flex items-center justify-between gap-3">
+          <a :href="`tel:${PHONE_NUMBER}`" class="flex-1 rounded-md bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-900 text-center hover:bg-blue-100 transition-colors">
+            {{ PHONE_NUMBER }}
+          </a>
+          <NuxtLink
+            :to="toggleLangLink"
+            class="inline-flex items-center justify-center rounded-md bg-blue-100 px-3 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ t('common.toggleLang') }}
+          </NuxtLink>
+        </div>
         <div class="px-2 pt-2 pb-3 space-y-1">
           <NuxtLink
             v-for="link in navLinks"
