@@ -22,7 +22,6 @@ useSeo({
 <template>
   <div>
     <ContactHero />
-    <ContactInfo />
     <HomeContactForm />
   </div>
 </template>

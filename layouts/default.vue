@@ -1,4 +1,5 @@
 <script setup>
+import ContactInfo from '~/components/contact/ContactInfo.vue'
 </script>
 
 <template>
@@ -7,6 +8,7 @@
     <main class="flex-grow">
       <slot />
     </main>
+    <ContactInfo />
     <Footer />
   </div>
 </template>

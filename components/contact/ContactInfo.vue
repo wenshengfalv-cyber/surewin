@@ -7,6 +7,14 @@ const { t } = useI18n()
 
 <template>
   <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="fixed top-20 right-5 z-50 hidden lg:block">
+      <div class="bg-white/95 border border-gray-200 rounded-3xl p-4 shadow-2xl backdrop-blur-sm">
+        <p class="text-sm font-semibold text-gray-700 mb-3">
+          {{ t('common.wechat') }}
+        </p>
+        <img :src="WECHAT_QR" alt="wechat qr code" class="w-44 rounded-2xl object-cover" />
+      </div>
+    </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <!-- Contact Information -->
