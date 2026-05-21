@@ -1,4 +1,3 @@
-import { ref, computed } from 'vue'
 import { Locale } from '~/composables/useLocales'
 
 interface BlogDate {
@@ -15,10 +14,6 @@ export interface BlogPost {
   excerpt: string
   slug: string
   fullContent: string
-}
-
-interface BlogPostsData {
-  [key in Locale]?: BlogPost[]
 }
 
 const blogPostsData: Record<Locale, BlogPost[]> = {
@@ -894,11 +889,879 @@ const blogPostsData: Record<Locale, BlogPost[]> = {
       `
     }
   ],
-  en: [
-    // English blog posts are not yet available for all locales.
+  ko: [
+    {
+      id: 1,
+      date: { day: '06', month: '1월' },
+      title: '장난죄: 정의, 결과 및 법적 경계',
+      author: 'seagod',
+      category: '기타',
+      excerpt: '장난죄는 일반적으로 오락이나 악의적 목적으로 다른 사람의 재산을 훼손하거나 생활을 방해하는 행위를 말합니다.',
+      slug: 'mischief-definition-consequences',
+      fullContent: `
+        <h2>장난죄의 정의</h2>
+        <p>장난죄는 일반적으로 오락이나 악의적 목적으로 다른 사람의 재산을 고의로 손상시키거나 다른 사람의 정상적인 생활을 방해하는 행위를 말합니다. 캐나다 형법에서는 장난죄를 범죄로 보고 있으며, 심각한 법적 결과를 초래할 수 있습니다.</p>
+        
+        <h3>장난죄의 유형</h3>
+        <ul>
+          <li>재산을 고의로 손상하거나 파괴하는 행위</li>
+          <li>다른 사람이 재산을 합법적으로 사용하는 것을 방해하는 행위</li>
+          <li>다른 사람의 재산에 대한 합법적인 사용, 향유 또는 운영을 방해하거나 중단시키는 행위</li>
+        </ul>
+
+        <h3>법적 결과</h3>
+        <p>캐나다 형법 430조에 따르면, 장난죄의 처벌은 재산 손실의 가치와 행위의 성격에 따라 달라집니다. 가능한 결과에는 다음이 포함됩니다:</p>
+        <ul>
+          <li>벌금</li>
+          <li>보호 관찰</li>
+          <li>징역(사건의 심각성에 따라 최대 10년)</li>
+          <li>범죄 기록</li>
+        </ul>
+
+        <h3>장난죄 혐의에 대응하는 방법</h3>
+        <p>장난죄 혐의를 받으면 즉시 전문 법률 상담을 받는 것이 중요합니다. 저희 변호사 팀은 다음과 같은 도움을 제공합니다:</p>
+        <ul>
+          <li>혐의의 심각성 평가</li>
+          <li>효과적인 방어 전략 수립</li>
+          <li>법정에서 고객의 이익 대변</li>
+          <li>혐의 취소 또는 형량 감면을 위한 최선의 결과 추구</li>
+        </ul>
+      `
+    },
+    {
+      id: 2,
+      date: { day: '06', month: '1월' },
+      title: '사기죄: 정의, 결과 및 예방',
+      author: 'seagod',
+      category: '캐나다 법',
+      excerpt: '사기죄는 다른 사람에게 불법적인 이익을 얻거나 손실을 가하려는 고의적인 기만 행위를 의미합니다.',
+      slug: 'fraud-definition-consequences',
+      fullContent: `
+        <h2>사기죄의 정의</h2>
+        <p>사기죄는 부당한 이익을 취하거나 타인에게 손해를 끼치기 위해 고의로 기만 행위를 하는 것을 의미합니다. 캐나다에서는 사기죄가 심각한 형사 범죄로 간주되며, 형법 380조의 적용을 받습니다.</p>
+
+        <h3>일반적인 사기 유형</h3>
+        <ul>
+          <li>신원 도용</li>
+          <li>신용카드 사기</li>
+          <li>투자 사기</li>
+          <li>보험 사기</li>
+          <li>사이버 사기</li>
+          <li>상업 사기</li>
+        </ul>
+
+        <h3>사기죄의 결과</h3>
+        <p>사기죄의 처벌은 관련 금액과 사건의 복잡성에 따라 달라집니다:</p>
+        <ul>
+          <li>금액이 5,000달러를 초과하는 경우: 최대 14년 징역</li>
+          <li>금액이 5,000달러 이하인 경우: 최대 2년 징역</li>
+          <li>영구적인 범죄 기록</li>
+          <li>경제적 배상</li>
+          <li>향후 채용 및 신용에 대한 영향</li>
+        </ul>
+
+        <h3>사기 예방 방법</h3>
+        <ul>
+          <li>개인 정보를 보호하세요</li>
+          <li>통신 출처를 확인하세요</li>
+          <li>너무 좋아 보이는 제안은 의심하세요</li>
+          <li>정기적으로 금융 명세서를 확인하세요</li>
+          <li>안전한 온라인 결제 수단을 사용하세요</li>
+        </ul>
+
+        <h3>사기 혐의에 대응하는 방법</h3>
+        <p>사기 사건은 종종 복잡하고 많은 증거를 수반합니다. 사기 혐의를 받는 경우 저희 법률팀은 다음과 같은 지원을 제공합니다:</p>
+        <ul>
+          <li>상세한 사건 분석</li>
+          <li>증거 검토 및 이의 제기</li>
+          <li>전문적인 방어 전략</li>
+          <li>검찰과의 협상</li>
+        </ul>
+      `
+    },
+    {
+      id: 3,
+      date: { day: '06', month: '1월' },
+      title: '위험 운전: 정의, 결과 및 예방',
+      author: 'seagod',
+      category: '캐나다 법',
+      excerpt: '위험 운전은 공공 안전에 위협이 될 수 있는 방식으로 자동차를 운전하는 것을 의미합니다.',
+      slug: 'dangerous-driving-definition',
+      fullContent: `
+        <h2>위험 운전의 정의</h2>
+        <p>위험 운전은 공공 안전에 위협이 될 수 있는 방식으로 자동차를 운전하는 것을 의미합니다. 캐나다 형법 320.13조에 따르면 이는 심각한 형사 범죄로 분류됩니다.</p>
+
+        <h3>위험 운전에 해당하는 상황</h3>
+        <ul>
+          <li>심각한 과속</li>
+          <li>위험한 추월</li>
+          <li>적색 신호 또는 정지 신호 위반</li>
+          <li>스트리트 레이싱</li>
+          <li>악천후나 열악한 도로 조건에서의 부적절한 운전</li>
+          <li>무모한 운전 행위</li>
+        </ul>
+
+        <h3>법적 결과</h3>
+        <p>위험 운전의 처벌은 매우 심각할 수 있습니다:</p>
+        <ul>
+          <li>최대 10년 징역(신체 손상을 초래한 경우 최대 14년)</li>
+          <li>사망을 초래할 경우 최대 무기징역</li>
+          <li>운전면허 정지</li>
+          <li>범죄 기록</li>
+          <li>높은 벌금</li>
+          <li>보험료 대폭 상승</li>
+        </ul>
+
+        <h3>위험 운전과 관련된 다른 혐의</h3>
+        <ul>
+          <li>무모 운전</li>
+          <li>스트리트 레이싱</li>
+          <li>신체 손상을 초래한 위험 운전</li>
+          <li>사망을 초래한 위험 운전</li>
+        </ul>
+
+        <h3>방어 전략</h3>
+        <p>위험 운전 혐의를 받을 경우 가능한 방어 전략은 다음과 같습니다:</p>
+        <ul>
+          <li>운전 행위의 위험성 여부에 이의 제기</li>
+          <li>증거의 적법성 검토</li>
+          <li>증인 진술의 신뢰성 검토</li>
+          <li>도로 및 기상 조건 고려</li>
+        </ul>
+
+        <p>저희 법률팀은 위험 운전 사건 처리 경험이 풍부하며 전문적인 법률 방어를 제공합니다.</p>
+      `
+    },
+    {
+      id: 4,
+      date: { day: '06', month: '1월' },
+      title: '경범죄 절도: 개념 및 결과',
+      author: 'seagod',
+      category: '캐나다 법',
+      excerpt: '경범죄 절도는 일반적으로 5,000달러 이하의 재산을 훔치는 행위를 말합니다.',
+      slug: 'petty-theft-concept-consequences',
+      fullContent: `
+        <h2>경범죄 절도의 정의</h2>
+        <p>경범죄 절도는 일반적으로 5,000달러 이하의 가치를 가진 재산을 훔치는 행위를 말합니다. '경범죄'라는 용어가 붙었지만, 이는 여전히 심각한 형사 범죄이며 귀하의 미래에 장기적인 영향을 미칠 수 있습니다.</p>
+
+        <h3>일반적인 경범죄 절도 상황</h3>
+        <ul>
+          <li>매장 절도</li>
+          <li>사무실 또는 작업장 절도</li>
+          <li>차량 내 물품 절도</li>
+          <li>개인 재산 절도</li>
+        </ul>
+
+        <h3>법적 결과</h3>
+        <p>캐나다 형법 334조에 따르면 경범죄 절도의 처벌에는 다음이 포함됩니다:</p>
+        <ul>
+          <li>기소될 경우 최대 2년 징역</li>
+          <li>요약 심판 절차인 경우 최대 5,000달러 벌금 또는 6개월 징역</li>
+          <li>범죄 기록</li>
+          <li>보호 관찰
+          </li>
+          <li>사회 봉사</li>
+        </ul>
+
+        <h3>범죄 기록의 장기적 영향</h3>
+        <p>경범죄 절도 범죄 기록은 다음에 영향을 줄 수 있습니다:</p>
+        <ul>
+          <li>취업 기회</li>
+          <li>교육 기회</li>
+          <li>미국 입국 등 여행 능력</li>
+          <li>주거 신청</li>
+          <li>전문 자격증 및 면허</li>
+        </ul>
+
+        <h3>초범과 재범</h3>
+        <p>초범은 다음을 받을 수 있는 자격이 있을 수 있습니다:</p>
+        <ul>
+          <li>전환 프로그램</li>
+          <li>합의 옵션</li>
+          <li>경감된 처벌</li>
+        </ul>
+        <p>그러나 재범은 더 엄격한 처벌을 받게 됩니다.</p>
+
+        <h3>방어 선택지</h3>
+        <p>저희 변호사는 다음을 도와드릴 수 있습니다:</p>
+        <ul>
+          <li>혐의 취소를 모색</li>
+          <li>감면된 처벌 협상</li>
+          <li>대체 해결책 탐색</li>
+          <li>기록 보호</li>
+          <li>법정에서 효과적인 변호</li>
+        </ul>
+      `
+    },
+    {
+      id: 5,
+      date: { day: '06', month: '1월' },
+      title: '캐나다의 가정폭력 및 폭행법 해설',
+      author: 'seagod',
+      category: '폭행',
+      excerpt: '캐나다 법에서 가정폭력과 폭행은 어떻게 정의되는지 설명합니다.',
+      slug: 'domestic-violence-assault-canada',
+      fullContent: `
+        <h2>캐나다 법에서의 가정폭력 및 폭행</h2>
+        <p>캐나다 법은 가정폭력과 폭행에 대해 무관용 원칙을 적용합니다. 이러한 혐의는 자녀와의 접촉 상실, 거주지 상실, 범죄 기록 획득 등 삶에 광범위한 영향을 미칠 수 있습니다.</p>
+
+        <h3>폭행 혐의의 유형</h3>
+        <p>캐나다 형법에서 폭행 혐의는 여러 수준으로 구분됩니다:</p>
+        <ul>
+          <li><strong>일반 폭행</strong> (266조): 위협 또는 경미한 신체 접촉을 포함하는 가장 경미한 형태</li>
+          <li><strong>무기 사용 또는 신체 상해를 초래한 폭행</strong> (267조): 무기를 사용하거나 실제 상해를 가하는 경우</li>
+          <li><strong>가중 폭행</strong> (268조): 심각한 신체 상해, 외상 또는 생명을 위협하는 경우</li>
+          <li><strong>성폭행</strong> (271-273조): 동의 없는 성적 접촉</li>
+        </ul>
+
+        <h3>가정폭력에 대한 특별 고려사항</h3>
+        <p>폭행이 가족 구성원 간에 발생하면 추가 법적 결과가 적용될 수 있습니다:</p>
+        <ul>
+          <li>접촉 금지 명령</li>
+          <li>가정 거주지 퇴거 요구</li>
+          <li>자녀 양육권에 미치는 영향</li>
+          <li>엄격한 보석 조건</li>
+          <li>더 긴 징역형 가능성</li>
+        </ul>
+
+        <h3>처벌</h3>
+        <p>폭행 처벌은 심각도에 따라 다릅니다:</p>
+        <ul>
+          <li><strong>일반 폭행</strong>: 최대 5년 징역</li>
+          <li><strong>무기 폭행</strong>: 최대 10년 징역</li>
+          <li><strong>가중 폭행</strong>: 최대 14년 징역</li>
+        </ul>
+
+        <h3>방어 전략</h3>
+        <p>가정폭력 또는 폭행 혐의에 직면한 경우 가능한 방어 전략은 다음과 같습니다:</p>
+        <ul>
+          <li>정당방위</li>
+          <li>타인을 보호하려는 행위</li>
+          <li>고의성 부재</li>
+          <li>허위 고소</li>
+          <li>특정 상황에서의 동의</li>
+          <li>증거 신뢰성에 대한 이의 제기</li>
+        </ul>
+
+        <h3>보석 및 접촉 금지 명령</h3>
+        <p>가정폭력 사건에서 피고인은 일반적으로 다음과 같은 엄격한 보석 조건에 직면합니다:</p>
+        <ul>
+          <li>피해자와의 접촉 금지</li>
+          <li>특정 장소 접근 금지</li>
+          <li>여권 제출</li>
+          <li>경찰에 정기적으로 보고</li>
+        </ul>
+
+        <p>저희 변호사 팀은 이러한 사건의 민감성을 이해하며, 전문성과 공감을 결합한 법률 서비스를 제공합니다.</p>
+      `
+    },
+    {
+      id: 6,
+      date: { day: '27', month: '12월' },
+      title: '새로운 교통법: 면허별 강화된 분심 운전 처벌',
+      author: 'seagod',
+      category: '분심 운전',
+      excerpt: '새로운 교통법은 운전면허 등급별로 더 엄격한 분심 운전 처벌 기준을 도입합니다.',
+      slug: 'new-distracted-driving-laws',
+      fullContent: `
+        <h2>새로운 교통법 규정</h2>
+        <p>새로운 교통법은 운전면허 등급별로 더 엄격한 분심 운전 처벌 기준을 설정했습니다. 이러한 변화는 휴대전화 및 기타 전자장치 사용으로 인한 교통사고를 줄이기 위한 것입니다.</p>
+
+        <h3>분심 운전이란?</h3>
+        <p>분심 운전에는 운전 중 다음 행위가 포함됩니다:</p>
+        <ul>
+          <li>휴대용 무선 통신 장치(휴대전화, 태블릿) 사용</li>
+          <li>엔터테인먼트 화면 열람 또는 사용</li>
+          <li>휴대용 전자 엔터테인먼트 기기 보유 또는 사용</li>
+          <li>GPS 프로그램 설정(합법적으로 고정되지 않은 경우)</li>
+        </ul>
+
+        <h3>면허 등급별 처벌</h3>
+        
+        <h4>G급 완전 면허 소지자</h4>
+        <ul>
+          <li><strong>1회 위반</strong>: 615~1,000달러 벌금, 3점 감점, 3일 면허 정지</li>
+          <li><strong>2회 위반</strong>: 615~2,000달러 벌금, 6점 감점, 7일 면허 정지</li>
+          <li><strong>3회 이상 위반</strong>: 615~3,000달러 벌금, 6점 감점, 30일 면허 정지</li>
+        </ul>
+
+        <h4>초보 면허 소지자 (G1, G2, M1, M2)</h4>
+        <ul>
+          <li><strong>1회 위반</strong>: 615~1,000달러 벌금, 30일 면허 정지</li>
+          <li><strong>2회 위반</strong>: 615~2,000달러 벌금, 90일 면허 정지</li>
+          <li><strong>3회 이상 위반</strong>: 면허 취소 및 재시험 필요</li>
+        </ul>
+
+        <h4>A부터 E급 상업 면허 소지자</h4>
+        <p>상업 운전자는 G급 완전 면허 소지자와 동일한 처벌을 받지만, 위반 기록은 상업 운전 자격에 영향을 미칠 수 있습니다.</p>
+
+        <h3>면제 조건</h3>
+        <p>다음 경우에는 운전자가 전자 장치를 사용할 수 있습니다:</p>
+        <ul>
+          <li>비상 상황을 신고하기 위해 911에 전화할 때</li>
+          <li>장치가 핸즈프리로 안전하게 고정된 경우</li>
+          <li>완전히 정차되어 도로에 있지 않은 경우</li>
+        </ul>
+
+        <h3>분심 운전 티켓에 대응하는 방법</h3>
+        <p>분심 운전 티켓을 받은 경우 저희가 도와드릴 수 있습니다:</p>
+        <ul>
+          <li>티켓의 적법성 검토</li>
+          <li>집행 절차에 이의 제기</li>
+          <li>사건을 뒷받침할 증거 수집</li>
+          <li>법정에서 대리</li>
+          <li>처벌 경감 또는 취소 시도</li>
+        </ul>
+
+        <h3>왜 티켓에 대응해야 하나요</h3>
+        <ul>
+          <li>감점 및 보험료 인상 방지</li>
+          <li>면허 정지 방지</li>
+          <li>운전 기록 보호</li>
+          <li>누적 위반으로 인한 더 심각한 결과 방지</li>
+        </ul>
+      `
+    },
+    {
+      id: 7,
+      date: { day: '27', month: '12월' },
+      title: '강화된 음주운전 처벌: 대마 합법화 이후의 도전',
+      author: 'seagod',
+      category: '음주 운전',
+      excerpt: '대마 합법화 이후에는 술이나 대마에 취한 상태에서 운전할 때 더 엄격한 법적 결과가 뒤따릅니다.',
+      slug: 'impaired-driving-cannabis-laws',
+      fullContent: `
+        <h2>강화된 음주운전 처벌</h2>
+        <p>대마가 합법화된 이후, 술이나 대마에 취한 상태로 운전하면 심각한 법적 결과를 초래합니다. 캐나다 정부는 이 새로운 문제를 해결하기 위해 더 엄격한 음주운전 관련 법을 시행했습니다.</p>
+
+        <h3>알코올 및 대마의 법적 한계</h3>
+        
+        <h4>알코올 한계</h4>
+        <ul>
+          <li><strong>경고 범위</strong>: 혈중 알코올 농도(BAC) 0.05-0.079</li>
+          <li><strong>형사 범죄</strong>: BAC 0.08 이상</li>
+        </ul>
+
+        <h4>대마 한계</h4>
+        <ul>
+          <li><strong>혈액 1ml당 2나노그램</strong>: 최소 형사 기준</li>
+          <li><strong>5나노그램/ml 이상</strong>: 더 엄격한 처벌</li>
+          <li><strong>알코올과 대마 혼합</strong>: BAC 0.05 + THC 2.5나노그램</li>
+        </ul>
+
+        <h3>처벌 수준</h3>
+
+        <h4>첫 번째 위반</h4>
+        <ul>
+          <li>최소 1,000달러 벌금</li>
+          <li>최소 1년 면허 정지</li>
+          <li>최대 10년 징역 가능</li>
+          <li>범죄 기록</li>
+          <li>점화 차단 장치 설치 의무</li>
+        </ul>
+
+        <h4>두 번째 위반</h4>
+        <ul>
+          <li>최소 30일 징역</li>
+          <li>최소 3년 면허 정지</li>
+          <li>더 높은 벌금</li>
+          <li>더 긴 점화 차단 장치 요구</li>
+        </ul>
+
+        <h4>세 번째 및 이후 위반</h4>
+        <ul>
+          <li>최소 120일 징역</li>
+          <li>최소 6년 면허 정지(종신 가능)</li>
+          <li>최대 10년 징역 가능</li>
+        </ul>
+
+        <h3>신체 손상 또는 사망 발생 시</h3>
+        <p>음주운전으로 인해 타인이 부상당하거나 사망하면 결과가 매우 심각합니다:</p>
+        <ul>
+          <li><strong>신체 손상 발생</strong>: 최대 14년 징역</li>
+          <li><strong>사망 발생</strong>: 최대 무기징역</li>
+        </ul>
+
+        <h3>도로변 검사</h3>
+        <p>경찰은 이제 다음 장비를 갖추고 있습니다:</p>
+        <ul>
+          <li>호흡측정기(알코올 검사)</li>
+          <li>타액 검사 장치(대마 검사)</li>
+          <li>표준화된 현장 음주운전 테스트(SFST)</li>
+          <li>마약 탐지 전문가(DRE) 평가</li>
+        </ul>
+
+        <h3>의무 알코올 검사(MAS)</h3>
+        <p>2018년 이후, 경찰은 의심 없이 합법적으로 정차한 운전자에게 호흡 샘플 제출을 요구할 수 있는 권한을 가집니다. 검사를 거부하는 것 자체가 형사 범죄입니다.</p>
+
+        <h3>호흡 샘플 제공 거부</h3>
+        <p>호흡, 혈액 또는 타액 샘플 제공을 거부하거나 실패하면 음주운전과 동일한 처벌을 받습니다:</p>
+        <ul>
+          <li>첫 번째: 최소 2,000달러 벌금</li>
+          <li>두 번째: 최소 30일 징역</li>
+          <li>세 번째: 최소 120일 징역</li>
+        </ul>
+
+        <h3>방어 전략</h3>
+        <p>음주운전 혐의에 직면했을 때 고려할 수 있는 방어는 다음과 같습니다:</p>
+        <ul>
+          <li>호흡 또는 약물 검사 정확성에 이의 제기</li>
+          <li>경찰 절차의 적법성 검토</li>
+          <li>헌장 권리 위반 여부</li>
+          <li>증거 연쇄 문제</li>
+          <li>교정 및 유지 보수 기록</li>
+          <li>합리적 의심의 방어</li>
+        </ul>
+
+        <h3>전문 법률 지원이 필요한 이유</h3>
+        <p>음주운전 사건은 다음과 같은 요소를 포함합니다:</p>
+        <ul>
+          <li>복잡한 과학적 증거</li>
+          <li>엄격한 절차 요건</li>
+          <li>헌법적 권리 문제</li>
+          <li>심각한 장기적 결과</li>
+        </ul>
+
+        <p>저희 법률팀은 알코올 및 대마 관련 사건을 포함한 음주운전 사건 처리 경험이 풍부합니다. 귀하의 권리를 보호하고 최상의 결과를 위해 노력하겠습니다.</p>
+      `
+    }
   ],
-  ko: [],
-  vi: []
+  vi: [
+    {
+      id: 1,
+      date: { day: '06', month: 'Thg 1' },
+      title: 'Hành vi phá hoại: Định nghĩa, Hậu quả và Ranh giới pháp lý',
+      author: 'seagod',
+      category: 'Chưa phân loại',
+      excerpt: 'Hành vi phá hoại thường ám chỉ những hành động gây tổn hại tài sản người khác hoặc can thiệp vào đời sống của họ với mục đích giải trí hoặc ác ý.',
+      slug: 'mischief-definition-consequences',
+      fullContent: `
+        <h2>Định nghĩa hành vi phá hoại</h2>
+        <p>Hành vi phá hoại thường ám chỉ những hành động nhằm giải trí hoặc mục đích ác ý, cố ý làm hư hỏng tài sản của người khác hoặc cản trở cuộc sống bình thường của họ. Theo luật hình sự Canada, hành vi phá hoại được coi là tội phạm và có thể dẫn đến hậu quả pháp lý nghiêm trọng.</p>
+
+        <h3>Các loại hành vi phá hoại</h3>
+        <ul>
+          <li>Đưa ra hành vi hủy hoại hoặc phá hủy tài sản</li>
+          <li>Can thiệp vào việc sử dụng hợp pháp tài sản của người khác</li>
+          <li>Cản trở, gián đoạn hoặc can thiệp vào việc sử dụng, tận hưởng hoặc vận hành hợp pháp tài sản của người khác</li>
+        </ul>
+
+        <h3>Hậu quả pháp lý</h3>
+        <p>Theo Điều 430 của Bộ Luật Hình sự Canada, mức xử phạt đối với hành vi phá hoại phụ thuộc vào giá trị thiệt hại tài sản và bản chất hành vi. Các hậu quả tiềm ẩn bao gồm:</p>
+        <ul>
+          <li>Phạt tiền</li>
+          <li>Giám sát cộng đồng</li>
+          <li>Bị giam giữ (lên đến 10 năm tùy thuộc mức độ nghiêm trọng)</li>
+          <li>Tiền án hình sự</li>
+        </ul>
+
+        <h3>Cách đối mặt với cáo buộc hành vi phá hoại</h3>
+        <p>Nếu bạn đối mặt với cáo buộc hành vi phá hoại, việc tìm kiếm trợ giúp pháp lý chuyên nghiệp ngay lập tức là rất quan trọng. Đội ngũ luật sư của chúng tôi có thể giúp bạn:</p>
+        <ul>
+          <li>Đánh giá mức độ nghiêm trọng của cáo buộc</li>
+          <li>Xây dựng chiến lược bào chữa hiệu quả</li>
+          <li>Đại diện quyền lợi của bạn tại tòa</li>
+          <li>Theo đuổi kết quả tốt nhất, bao gồm cả việc bỏ cáo buộc hoặc giảm nhẹ hình phạt</li>
+        </ul>
+      `
+    },
+    {
+      id: 2,
+      date: { day: '06', month: 'Thg 1' },
+      title: 'Lừa đảo: Định nghĩa, Hậu quả và Phòng ngừa',
+      author: 'seagod',
+      category: 'Luật Canada',
+      excerpt: 'Lừa đảo là hành vi cố ý lừa dối nhằm thu lợi bất chính hoặc gây thiệt hại cho người khác.',
+      slug: 'fraud-definition-consequences',
+      fullContent: `
+        <h2>Định nghĩa lừa đảo</h2>
+        <p>Lừa đảo là hành vi cố ý lừa dối nhằm thu lợi bất chính hoặc gây thiệt hại cho người khác. Ở Canada, lừa đảo được coi là một trọng tội hình sự theo Điều 380 của Bộ Luật Hình sự.</p>
+
+        <h3>Các loại lừa đảo phổ biến</h3>
+        <ul>
+          <li>Ăn cắp danh tính</li>
+          <li>Lừa đảo thẻ tín dụng</li>
+          <li>Lừa đảo đầu tư</li>
+          <li>Lừa đảo bảo hiểm</li>
+          <li>Lừa đảo mạng</li>
+          <li>Lừa đảo thương mại</li>
+        </ul>
+
+        <h3>Hậu quả của lừa đảo</h3>
+        <p>Hình phạt đối với lừa đảo phụ thuộc vào số tiền và độ phức tạp của vụ án:</p>
+        <ul>
+          <li>Số tiền vượt quá 5.000 đô la: có thể bị tù đến 14 năm</li>
+          <li>Số tiền không vượt quá 5.000 đô la: có thể bị tù đến 2 năm</li>
+          <li>Có tiền án hình sự vĩnh viễn</li>
+          <li>Phải bồi thường tài chính</li>
+          <li>Ảnh hưởng đến việc làm và điểm tín dụng trong tương lai</li>
+        </ul>
+
+        <h3>Phòng ngừa lừa đảo</h3>
+        <ul>
+          <li>Bảo mật thông tin cá nhân</li>
+          <li>Xác thực nguồn liên lạc</li>
+          <li>Cảnh giác với các ưu đãi "quá tốt để là thật"</li>
+          <li>Thường xuyên kiểm tra sao kê tài chính</li>
+          <li>Sử dụng phương thức thanh toán trực tuyến an toàn</li>
+        </ul>
+
+        <h3>Đối mặt với cáo buộc lừa đảo</h3>
+        <p>Các vụ án lừa đảo thường phức tạp và có nhiều bằng chứng. Nếu bạn bị buộc tội lừa đảo, đội ngũ luật sư của chúng tôi sẽ cung cấp:</p>
+        <ul>
+          <li>Phân tích vụ án chi tiết</li>
+          <li>Rà soát và phản bác bằng chứng</li>
+          <li>Chiến lược bào chữa chuyên nghiệp</li>
+          <li>Thương lượng với công tố viên</li>
+        </ul>
+      `
+    },
+    {
+      id: 3,
+      date: { day: '06', month: 'Thg 1' },
+      title: 'Lái xe nguy hiểm: Định nghĩa, Hậu quả và Phòng ngừa',
+      author: 'seagod',
+      category: 'Luật Canada',
+      excerpt: 'Lái xe nguy hiểm là điều khiển phương tiện theo cách có thể đe dọa an toàn công cộng.',
+      slug: 'dangerous-driving-definition',
+      fullContent: `
+        <h2>Định nghĩa lái xe nguy hiểm</h2>
+        <p>Lái xe nguy hiểm là điều khiển phương tiện cơ giới theo cách có thể gây nguy hiểm cho an toàn công cộng. Theo Điều 320.13 của Bộ Luật Hình sự Canada, đây là một trọng tội nghiêm trọng.</p>
+
+        <h3>Những hành vi cấu thành lái xe nguy hiểm</h3>
+        <ul>
+          <li>Vượt tốc độ quá mức</li>
+          <li>Vượt ẩu trong làn đường</li>
+          <li>Vượt đèn đỏ hoặc biển dừng</li>
+          <li>Đua xe đường phố</li>
+          <li>Lái xe không phù hợp trong thời tiết xấu hoặc điều kiện đường kém</li>
+          <li>Hành vi lái xe liều lĩnh</li>
+        </ul>
+
+        <h3>Hậu quả pháp lý</h3>
+        <p>Hình phạt đối với lái xe nguy hiểm có thể rất nghiêm trọng:</p>
+        <ul>
+          <li>Án tù lên đến 10 năm (tối đa 14 năm nếu gây thương tích)</li>
+          <li>Án tù lên đến chung thân nếu gây tử vong</li>
+          <li>Thu hồi giấy phép lái xe</li>
+          <li>Tiền án hình sự</li>
+          <li>Phạt nặng</li>
+          <li>Phí bảo hiểm tăng cao</li>
+        </ul>
+
+        <h3>Các cáo buộc liên quan</h3>
+        <ul>
+          <li>Lái xe liều lĩnh</li>
+          <li>Đua xe đường phố</li>
+          <li>Lái xe nguy hiểm gây thương tích</li>
+          <li>Lái xe nguy hiểm gây tử vong</li>
+        </ul>
+
+        <h3>Chiến lược bào chữa</h3>
+        <p>Khi đối mặt với cáo buộc lái xe nguy hiểm, các chiến lược bào chữa có thể bao gồm:</p>
+        <ul>
+          <li>Phản bác mức độ "nguy hiểm" của hành vi lái xe</li>
+          <li>Kiểm tra tính hợp pháp của bằng chứng</li>
+          <li>Độ tin cậy của lời khai nhân chứng</li>
+          <li>Xem xét điều kiện đường và thời tiết</li>
+        </ul>
+
+        <p>Đội ngũ pháp lý của chúng tôi có kinh nghiệm phong phú trong xử lý các vụ lái xe nguy hiểm và sẽ cung cấp bào chữa chuyên nghiệp.</p>
+      `
+    },
+    {
+      id: 4,
+      date: { day: '06', month: 'Thg 1' },
+      title: 'Trộm cắp vặt: Khái niệm và Hậu quả',
+      author: 'seagod',
+      category: 'Luật Canada',
+      excerpt: 'Trộm cắp vặt thường đề cập đến việc lấy đồ giá trị không quá 5.000 đô la.',
+      slug: 'petty-theft-concept-consequences',
+      fullContent: `
+        <h2>Định nghĩa trộm cắp vặt</h2>
+        <p>Trộm cắp vặt thường ám chỉ việc đánh cắp tài sản có giá trị không quá 5.000 đô la. Mặc dù gọi là "vặt", nhưng đây vẫn là một tội hình sự nghiêm trọng có thể gây ảnh hưởng lâu dài đến tương lai của bạn.</p>
+
+        <h3>Những tình huống trộm cắp vặt thường gặp</h3>
+        <ul>
+          <li>Ăn cắp tại cửa hàng</li>
+          <li>Trộm cắp tại văn phòng hoặc nơi làm việc</li>
+          <li>Trộm cắp từ phương tiện</li>
+          <li>Trộm cắp tài sản cá nhân</li>
+        </ul>
+
+        <h3>Hậu quả pháp lý</h3>
+        <p>Theo Điều 334 của Bộ Luật Hình sự Canada, hình phạt đối với trộm cắp vặt bao gồm:</p>
+        <ul>
+          <li>Tù lên đến 2 năm nếu truy tố theo thủ tục truy tố</li>
+          <li>Phạt lên đến 5.000 đô la hoặc tù đến 6 tháng nếu xử theo thủ tục đơn giản</li>
+          <li>Tiền án hình sự</li>
+          <li>Xét an toàn</li>
+          <li>Phục vụ cộng đồng</li>
+        </ul>
+
+        <h3>Ảnh hưởng lâu dài của tiền án hình sự</h3>
+        <p>Ngay cả tiền án trộm cắp vặt cũng có thể ảnh hưởng đến:</p>
+        <ul>
+          <li>Cơ hội việc làm</li>
+          <li>Cơ hội học tập</li>
+          <li>Khả năng đi lại (đặc biệt là vào Mỹ)</li>
+          <li>Đơn xin nhà ở</li>
+          <li>Giấy phép và chứng chỉ chuyên môn</li>
+        </ul>
+
+        <h3>Người phạm tội lần đầu và tái phạm</h3>
+        <p>Người phạm tội lần đầu có thể đủ điều kiện nhận:</p>
+        <ul>
+          <li>Chương trình chuyển hướng</li>
+          <li>Phương án hòa giải</li>
+          <li>Hình phạt nhẹ hơn</li>
+        </ul>
+        <p>Tuy nhiên, người tái phạm sẽ đối mặt với hình phạt nghiêm khắc hơn.</p>
+
+        <h3>Tùy chọn bào chữa</h3>
+        <p>Luật sư của chúng tôi có thể giúp bạn:</p>
+        <ul>
+          <li>Yêu cầu rút cáo buộc</li>
+          <li>Thương lượng giảm nhẹ hình phạt</li>
+          <li>Tìm kiếm giải pháp thay thế</li>
+          <li>Bảo vệ lý lịch của bạn</li>
+          <li>Bào chữa hiệu quả tại tòa</li>
+        </ul>
+      `
+    },
+    {
+      id: 5,
+      date: { day: '06', month: 'Thg 1' },
+      title: 'Giải thích luật gia đình và tấn công ở Canada',
+      author: 'seagod',
+      category: 'Tấn công',
+      excerpt: 'Giải thích cách Canada định nghĩa gia đình và tấn công theo luật pháp.',
+      slug: 'domestic-violence-assault-canada',
+      fullContent: `
+        <h2>Gia đình và tấn công theo luật Canada</h2>
+        <p>Luật Canada áp dụng chính sách không khoan nhượng đối với gia đình và tấn công. Những cáo buộc này có thể gây tác động sâu rộng đến cuộc sống của bạn, bao gồm mất quyền tiếp xúc với con cái, mất chỗ ở và có tiền án hình sự.</p>
+
+        <h3>Các loại cáo buộc tấn công</h3>
+        <p>Theo luật hình sự Canada, các cáo buộc tấn công được phân thành nhiều cấp độ:</p>
+        <ul>
+          <li><strong>Tấn công thông thường</strong> (Điều 266): Hình thức nhẹ nhất, bao gồm đe dọa hoặc tiếp xúc cơ thể nhẹ</li>
+          <li><strong>Tấn công bằng vũ khí hoặc gây thương tích</strong> (Điều 267): Bao gồm vũ khí hoặc gây tổn thương thực tế</li>
+          <li><strong>Tấn công nghiêm trọng</strong> (Điều 268): Gây thương tích nghiêm trọng, biến dạng hoặc đe dọa tính mạng</li>
+          <li><strong>Tấn công tình dục</strong> (Điều 271-273): Tiếp xúc tình dục không có sự đồng ý</li>
+        </ul>
+
+        <h3>Các yếu tố đặc biệt trong gia đình</h3>
+        <p>Khi tấn công xảy ra giữa các thành viên gia đình, có thể áp dụng thêm hậu quả pháp lý:</p>
+        <ul>
+          <li>Lệnh cấm tiếp xúc</li>
+          <li>Bị yêu cầu rời khỏi nơi cư trú</li>
+          <li>Ảnh hưởng đến quyền nuôi con</li>
+          <li>Điều kiện bảo lãnh nghiêm ngặt hơn</li>
+          <li>Có thể chịu án tù dài hơn</li>
+        </ul>
+
+        <h3>Hình phạt</h3>
+        <p>Hình phạt đối với tấn công phụ thuộc vào mức độ nghiêm trọng:</p>
+        <ul>
+          <li><strong>Tấn công thông thường</strong>: Tối đa 5 năm tù</li>
+          <li><strong>Tấn công bằng vũ khí</strong>: Tối đa 10 năm tù</li>
+          <li><strong>Tấn công nghiêm trọng</strong>: Tối đa 14 năm tù</li>
+        </ul>
+
+        <h3>Chiến lược bào chữa</h3>
+        <p>Khi đối mặt với cáo buộc gia đình hoặc tấn công, các bào chữa có thể bao gồm:</p>
+        <ul>
+          <li>Tự vệ</li>
+          <li>Bảo vệ người khác</li>
+          <li>Thiếu ý định</li>
+          <li>Cáo buộc sai</li>
+          <li>Đồng ý (trong một số trường hợp)</li>
+          <li>Thách thức tính xác thực của bằng chứng</li>
+        </ul>
+
+        <h3>Bảo lãnh và lệnh cấm tiếp xúc</h3>
+        <p>Trong các vụ gia đình, bị cáo thường phải đối mặt với điều kiện bảo lãnh nghiêm ngặt, bao gồm:</p>
+        <ul>
+          <li>Không được tiếp xúc với nạn nhân</li>
+          <li>Không được đến những địa điểm cụ thể</li>
+          <li>Giao nộp hộ chiếu</li>
+          <li>Báo cáo thường xuyên với cảnh sát</li>
+        </ul>
+
+        <p>Đội ngũ luật sư của chúng tôi hiểu tính nhạy cảm của những vụ việc này và sẽ cung cấp dịch vụ pháp lý kết hợp giữa sự thấu cảm và chuyên môn.</p>
+      `
+    },
+    {
+      id: 6,
+      date: { day: '27', month: 'Thg 12' },
+      title: 'Luật giao thông mới: Tăng nặng xử phạt lái xe mất tập trung cho tài xế có giấy phép',
+      author: 'seagod',
+      category: 'Lái xe mất tập trung',
+      excerpt: 'Luật giao thông mới thiết lập tiêu chuẩn xử phạt khắt khe hơn cho lái xe mất tập trung theo từng cấp giấy phép.',
+      slug: 'new-distracted-driving-laws',
+      fullContent: `
+        <h2>Quy định luật giao thông mới</h2>
+        <p>Luật giao thông mới đã áp dụng tiêu chuẩn xử phạt khắt khe hơn đối với lái xe mất tập trung cho các cấp giấy phép khác nhau. Những thay đổi này nhằm giảm tai nạn giao thông do sử dụng điện thoại và thiết bị điện tử khác.</p>
+
+        <h3>Lái xe mất tập trung là gì</h3>
+        <p>Lái xe mất tập trung bao gồm khi điều khiển phương tiện:</p>
+        <ul>
+          <li>Sử dụng thiết bị truyền thông cầm tay (điện thoại, máy tính bảng)</li>
+          <li>Xem hoặc sử dụng màn hình giải trí</li>
+          <li>Cầm hoặc sử dụng thiết bị giải trí điện tử</li>
+          <li>Cài đặt GPS (trừ khi gắn cố định hợp pháp)</li>
+        </ul>
+
+        <h3>Xử phạt theo cấp giấy phép</h3>
+        
+        <h4>Người giữ giấy phép đầy đủ (G)</h4>
+        <ul>
+          <li><strong>Vi phạm đầu tiên</strong>: Phạt 615-1,000 đô la, trừ 3 điểm, tạm giữ giấy phép 3 ngày</li>
+          <li><strong>Vi phạm thứ hai</strong>: Phạt 615-2,000 đô la, trừ 6 điểm, tạm giữ giấy phép 7 ngày</li>
+          <li><strong>Vi phạm thứ ba trở lên</strong>: Phạt 615-3,000 đô la, trừ 6 điểm, tạm giữ giấy phép 30 ngày</li>
+        </ul>
+
+        <h4>Người giữ giấy phép mới (G1, G2, M1, M2)</h4>
+        <ul>
+          <li><strong>Vi phạm đầu tiên</strong>: Phạt 615-1,000 đô la, tạm giữ giấy phép 30 ngày</li>
+          <li><strong>Vi phạm thứ hai</strong>: Phạt 615-2,000 đô la, tạm giữ giấy phép 90 ngày</li>
+          <li><strong>Vi phạm thứ ba trở lên</strong>: Hủy giấy phép, phải thi lại</li>
+        </ul>
+
+        <h4>Người giữ giấy phép thương mại (hạng A-E)</h4>
+        <p>Lái xe thương mại chịu cùng mức xử phạt như người giữ giấy phép đầy đủ G, nhưng hồ sơ vi phạm có thể ảnh hưởng đến tư cách lái xe thương mại của họ.</p>
+
+        <h3>Trường hợp ngoại lệ</h3>
+        <p>Lái xe có thể sử dụng thiết bị điện tử trong những trường hợp sau:</p>
+        <ul>
+          <li>Gọi 911 báo cáo tình huống khẩn cấp</li>
+          <li>Thiết bị được gắn cố định cách an toàn và rảnh tay</li>
+          <li>Đã dừng xe hoàn toàn và không ở trên đường</li>
+        </ul>
+
+        <h3>Cách chống lại vé lái xe mất tập trung</h3>
+        <p>Nếu bạn nhận vé lái xe mất tập trung, chúng tôi có thể giúp bạn:</p>
+        <ul>
+          <li>Xem xét tính hợp pháp của vé</li>
+          <li>Thách thức thủ tục thi hành</li>
+          <li>Tập hợp bằng chứng hỗ trợ</li>
+          <li>Đại diện bạn tại tòa</li>
+          <li>Đề nghị giảm nhẹ hoặc hủy phạt</li>
+        </ul>
+
+        <h3>Tại sao phải chống lại vé</h3>
+        <ul>
+          <li>Tránh bị trừ điểm và tăng phí bảo hiểm</li>
+          <li>Ngăn ngừa tạm giữ giấy phép</li>
+          <li>Bảo vệ hồ sơ lái xe</li>
+          <li>Tránh hậu quả nghiêm trọng hơn do vi phạm tích lũy</li>
+        </ul>
+      `
+    },
+    {
+      id: 7,
+      date: { day: '27', month: 'Thg 12' },
+      title: 'Tăng nặng xử phạt lái xe không tỉnh táo: Thách thức sau khi hợp pháp hóa cần sa',
+      author: 'seagod',
+      category: 'Lái xe say rượu',
+      excerpt: 'Sau khi cần sa được hợp pháp hóa, lái xe sau khi uống rượu hoặc dùng cần sa đều phải chịu hậu quả pháp lý nghiêm trọng.',
+      slug: 'impaired-driving-cannabis-laws',
+      fullContent: `
+        <h2>Tăng nặng xử phạt lái xe không tỉnh táo</h2>
+        <p>Sau khi cần sa được hợp pháp hóa, dù lái xe sau khi uống rượu hay dùng cần sa, bạn vẫn phải đối mặt với hậu quả pháp lý nghiêm trọng. Chính phủ Canada đã ban hành luật lái xe không tỉnh táo nghiêm ngặt hơn để ứng phó với thách thức mới này.</p>
+
+        <h3>Giới hạn pháp lý đối với rượu và cần sa</h3>
+        
+        <h4>Giới hạn rượu</h4>
+        <ul>
+          <li><strong>Phạm vi cảnh báo</strong>: Nồng độ cồn trong máu (BAC) 0.05-0.079</li>
+          <li><strong>Tội hình sự</strong>: BAC 0.08 trở lên</li>
+        </ul>
+
+        <h4>Giới hạn cần sa</h4>
+        <ul>
+          <li><strong>2 nanogram/ml máu</strong>: ngưỡng hình sự tối thiểu</li>
+          <li><strong>5 nanogram/ml trở lên</strong>: xử phạt nghiêm trọng hơn</li>
+          <li><strong>Hỗn hợp rượu và cần sa</strong>: BAC 0.05 + THC 2.5 nanogram</li>
+        </ul>
+
+        <h3>Cấp độ xử phạt</h3>
+
+        <h4>Vi phạm đầu tiên</h4>
+        <ul>
+          <li>Phạt tối thiểu 1.000 đô la</li>
+          <li>Treo bằng ít nhất 1 năm</li>
+          <li>Có thể bị giam giữ (tối đa 10 năm)</li>
+          <li>Tiền án hình sự</li>
+          <li>Bắt buộc lắp đặt thiết bị khóa đánh lửa</li>
+        </ul>
+
+        <h4>Vi phạm thứ hai</h4>
+        <ul>
+          <li>Phạt tù tối thiểu 30 ngày</li>
+          <li>Treo bằng ít nhất 3 năm</li>
+          <li>Phạt cao hơn</li>
+          <li>Yêu cầu lắp khóa đánh lửa dài hơn</li>
+        </ul>
+
+        <h4>Vi phạm thứ ba trở lên</h4>
+        <ul>
+          <li>Phạt tù tối thiểu 120 ngày</li>
+          <li>Treo bằng ít nhất 6 năm (có thể suốt đời)</li>
+          <li>Có thể bị phạt tù lên đến 10 năm</li>
+        </ul>
+
+        <h3>Gây thương tích hoặc tử vong</h3>
+        <p>Nếu lái xe không tỉnh táo gây thương tích hoặc tử vong cho người khác, hậu quả sẽ cực kỳ nghiêm trọng:</p>
+        <ul>
+          <li><strong>Gây thương tích</strong>: Tối đa 14 năm tù</li>
+          <li><strong>Gây tử vong</strong>: Tối đa chung thân</li>
+        </ul>
+
+        <h3>Kiểm tra bên đường</h3>
+        <p>Hiện nay cảnh sát được trang bị:</p>
+        <ul>
+          <li>Máy kiểm tra hơi thở (phát hiện rượu)</li>
+          <li>Thiết bị kiểm tra nước bọt (phát hiện cần sa)</li>
+          <li>Kiểm tra tỉnh táo tiêu chuẩn trên đường (SFST)</li>
+          <li>Đánh giá của Chuyên gia nhận diện thuốc (DRE)</li>
+        </ul>
+
+        <h3>Kiểm tra rượu bắt buộc (MAS)</h3>
+        <p>Kể từ năm 2018, cảnh sát có quyền yêu cầu mẫu hơi thở từ bất kỳ tài xế nào được dừng xe hợp pháp, ngay cả khi không có dấu hiệu nghi ngờ. Từ chối kiểm tra tự thân là một hành vi hình sự.</p>
+
+        <h3>Từ chối cung cấp mẫu hơi thở</h3>
+        <p>Hình phạt cho việc từ chối hoặc không cung cấp mẫu hơi thở, máu hoặc nước bọt tương đương với lái xe không tỉnh táo:</p>
+        <ul>
+          <li>Lần đầu: Phạt tối thiểu 2.000 đô la</li>
+          <li>Lần hai: Phạt tù tối thiểu 30 ngày</li>
+          <li>Lần ba: Phạt tù tối thiểu 120 ngày</li>
+        </ul>
+
+        <h3>Chiến lược bào chữa</h3>
+        <p>Khi đối mặt với cáo buộc lái xe không tỉnh táo, các chiến lược bào chữa có thể bao gồm:</p>
+        <ul>
+          <li>Phản bác độ chính xác của xét nghiệm hơi thở hoặc ma túy</li>
+          <li>Kiểm tra tính hợp pháp của thủ tục cảnh sát</li>
+          <li>Vi phạm Hiến chương Quyền lợi</li>
+          <li>Vấn đề chuỗi bằng chứng</li>
+          <li>Hồ sơ hiệu chuẩn và bảo trì</li>
+          <li>Bào chữa nghi ngờ hợp lý</li>
+        </ul>
+
+        <h3>Tại sao cần trợ giúp pháp lý chuyên nghiệp</h3>
+        <p>Các vụ án lái xe không tỉnh táo liên quan đến:</p>
+        <ul>
+          <li>Bằng chứng khoa học phức tạp</li>
+          <li>Yêu cầu thủ tục nghiêm ngặt</li>
+          <li>Các vấn đề về quyền hiến pháp</li>
+          <li>Hậu quả lâu dài nghiêm trọng</li>
+        </ul>
+
+        <p>Đội ngũ luật sư của chúng tôi có kinh nghiệm phong phú trong các vụ án lái xe không tỉnh táo, bao gồm cả các vụ liên quan đến rượu và cần sa. Chúng tôi sẽ bảo vệ quyền lợi của bạn và theo đuổi kết quả tốt nhất có thể.</p>
+      `
+    }
+  ]
 }
 
 /**
