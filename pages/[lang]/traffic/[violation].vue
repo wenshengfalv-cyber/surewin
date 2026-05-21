@@ -2,10 +2,12 @@
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from '#app'
 import { useSeo } from '~/composables/useSeo'
+import { normalizeLocale } from '~/composables/useLocales'
 
 const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
+const lang = normalizeLocale(route.params.lang)
 
 const violation = route.params.violation;
 
@@ -20,7 +22,7 @@ const trafficItems = [
 
 // Validate violation
 if (!trafficItems.includes(violation)) {
-  router.push(`/${route.params.lang}/`)
+  router.push(`/${lang}/`)
 }
 
 useSeo({
@@ -29,7 +31,7 @@ useSeo({
 })
 
 const getBackLink = () => {
-  return `/${route.params.lang}/`
+  return `/${lang}/`
 }
 </script>
 

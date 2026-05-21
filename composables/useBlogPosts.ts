@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue'
+import { Locale } from '~/composables/useLocales'
 
 interface BlogDate {
   day: string
@@ -17,11 +18,10 @@ export interface BlogPost {
 }
 
 interface BlogPostsData {
-  zh: BlogPost[]
-  en: BlogPost[]
+  [key in Locale]?: BlogPost[]
 }
 
-const blogPostsData: BlogPostsData = {
+const blogPostsData: Record<Locale, BlogPost[]> = {
   zh: [
     {
       id: 1,
@@ -893,7 +893,12 @@ const blogPostsData: BlogPostsData = {
         <p>Our legal team has extensive experience with impaired driving cases, including both alcohol and cannabis-related matters. We will protect your rights and pursue the best possible outcome.</p>
       `
     }
-  ]
+  ],
+  en: [
+    // English blog posts are not yet available for all locales.
+  ],
+  ko: [],
+  vi: []
 }
 
 /**
@@ -906,39 +911,39 @@ export const useBlogPosts = () => {
    * @param lang - Language code ('en' or 'zh')
    * @returns Array of blog posts for the specified language
    */
-  const getAllPosts = (lang: 'en' | 'zh' = 'en'): BlogPost[] => {
-    return blogPostsData[lang] || []
+  const getAllPosts = (lang: Locale = 'en'): BlogPost[] => {
+    return blogPostsData[lang] || blogPostsData['en'] || []
   }
 
   /**
    * Get a specific blog post by slug and language
    * @param slug - The blog post slug
-   * @param lang - Language code ('en' or 'zh')
+   * @param lang - Language code ('en', 'zh', 'ko', or 'vi')
    * @returns The blog post object if found, null otherwise
    */
-  const getPostBySlug = (slug: string, lang: 'en' | 'zh' = 'en'): BlogPost | null => {
-    const posts = blogPostsData[lang] || []
+  const getPostBySlug = (slug: string, lang: Locale = 'en'): BlogPost | null => {
+    const posts = blogPostsData[lang] || blogPostsData['en'] || []
     return posts.find(post => post.slug === slug) || null
   }
 
   /**
    * Get a blog post by ID and language
    * @param id - The blog post ID
-   * @param lang - Language code ('en' or 'zh')
+   * @param lang - Language code ('en', 'zh', 'ko', or 'vi')
    * @returns The blog post object if found, null otherwise
    */
-  const getPostById = (id: number, lang: 'en' | 'zh' = 'en'): BlogPost | null => {
-    const posts = blogPostsData[lang] || []
+  const getPostById = (id: number, lang: Locale = 'en'): BlogPost | null => {
+    const posts = blogPostsData[lang] || blogPostsData['en'] || []
     return posts.find(post => post.id === id) || null
   }
 
   /**
    * Get the total count of blog posts for a language
-   * @param lang - Language code ('en' or 'zh')
+   * @param lang - Language code ('en', 'zh', 'ko', or 'vi')
    * @returns Number of blog posts
    */
-  const getPostCount = (lang: 'en' | 'zh' = 'en'): number => {
-    return blogPostsData[lang]?.length || 0
+  const getPostCount = (lang: Locale = 'en'): number => {
+    return blogPostsData[lang]?.length || blogPostsData['en']?.length || 0
   }
 
   return {

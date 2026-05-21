@@ -2,7 +2,9 @@
 import { useI18n } from 'vue-i18n'
 import { computed, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { PHONE_NUMBER } from '../constant/text';
+import { PHONE_NUMBER } from '../constant/text'
+import { useLocaleMeta } from '~/composables/useLocaleMeta'
+import { supportedLocales, localeNames } from '~/composables/useLocales'
 
 const { t, locale } = useI18n()
 const route = useRoute()
@@ -17,7 +19,6 @@ onMounted(() => {
 })
 
 const navLinks = computed(() => [
-  // { key: 'nav.home', path: '/' },
   { key: 'nav.about', path: '/about-us' },
   { key: 'nav.services', path: '/services' },
   { key: 'nav.blog', path: '/blogs' },
@@ -25,11 +26,18 @@ const navLinks = computed(() => [
   { key: 'nav.contact', path: '/contact' }
 ])
 
-const toggleLangLink = computed(() => {
-  const newLang = locale.value === 'en' ? 'zh' : 'en'
-  const pathWithoutLang = route.path.replace(/^\/(zh|en)/, '')
-  return `/${newLang}${pathWithoutLang}`
+const currentPath = computed(() => {
+  const path = route.path.replace(new RegExp(`^/(${supportedLocales.join('|')})`), '')
+  return path || '/'
 })
+
+const languageLinks = computed(() =>
+  supportedLocales.map((lang) => ({
+    code: lang,
+    name: localeNames[lang],
+    to: `/${lang}${currentPath.value === '/' ? '' : currentPath.value}`
+  }))
+)
 
 const isLinkActive = (path) => {
   // Handle the special case for the home page link
@@ -75,12 +83,22 @@ const closeMobileMenu = () => {
 
         <!-- Language Switcher & Phone & Mobile Menu Button -->
         <div class="flex items-center space-x-3">
-          <NuxtLink
-            :to="toggleLangLink"
-            class="hidden sm:inline-flex px-3 py-1 text-sm font-medium rounded-md bg-blue-100 text-blue-900 hover:bg-blue-200 transition-colors"
-          >
-            {{ t('common.toggleLang') }}
-          </NuxtLink>
+          <div class="hidden sm:flex items-center space-x-2">
+            <span class="px-3 py-1 text-sm font-medium rounded-md bg-blue-50 text-blue-900">
+              {{ t('common.toggleLang') }}
+            </span>
+            <div class="flex items-center space-x-2">
+              <NuxtLink
+                v-for="link in languageLinks"
+                :key="link.code"
+                :to="link.to"
+                class="px-3 py-1 text-sm font-medium rounded-md transition-colors"
+                :class="link.code === locale.value ? 'bg-blue-900 text-white' : 'bg-blue-100 text-blue-900 hover:bg-blue-200'"
+              >
+                {{ link.name }}
+              </NuxtLink>
+            </div>
+          </div>
           <a :href="`tel:${PHONE_NUMBER}`" class="hidden sm:inline-flex text-blue-900 font-semibold hover:text-blue-700 transition-colors text-sm">
             {{ PHONE_NUMBER }}
           </a>
@@ -121,17 +139,21 @@ const closeMobileMenu = () => {
         v-if="mobileMenuOpen"
         class="md:hidden border-t border-gray-200 bg-white"
       >
-        <div class="px-4 py-4 border-b border-gray-200 flex items-center justify-between gap-3">
-          <a :href="`tel:${PHONE_NUMBER}`" class="flex-1 rounded-md bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-900 text-center hover:bg-blue-100 transition-colors">
+        <div class="px-4 py-4 border-b border-gray-200">
+          <a :href="`tel:${PHONE_NUMBER}`" class="block rounded-md bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-900 text-center hover:bg-blue-100 transition-colors mb-3">
             {{ PHONE_NUMBER }}
           </a>
-          <NuxtLink
-            :to="toggleLangLink"
-            class="inline-flex items-center justify-center rounded-md bg-blue-100 px-3 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 transition-colors"
-            @click="closeMobileMenu"
-          >
-            {{ t('common.toggleLang') }}
-          </NuxtLink>
+          <div class="flex flex-wrap gap-2">
+            <NuxtLink
+              v-for="link in languageLinks"
+              :key="link.code"
+              :to="link.to"
+              class="inline-flex items-center justify-center rounded-md bg-blue-100 px-3 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 transition-colors"
+              @click="closeMobileMenu"
+            >
+              {{ link.name }}
+            </NuxtLink>
+          </div>
         </div>
         <div class="px-2 pt-2 pb-3 space-y-1">
           <NuxtLink

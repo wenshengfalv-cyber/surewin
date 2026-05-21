@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
 import { useBlogPosts } from '~/composables/useBlogPosts'
 import { useSeo } from '~/composables/useSeo'
+import { normalizeLocale } from '~/composables/useLocales'
 
 definePageMeta({
   layout: 'default'
@@ -13,7 +14,7 @@ const route = useRoute()
 const { locale, t } = useI18n()
 const { getPostBySlug } = useBlogPosts()
 
-const lang = (route.params.lang === 'en') ? 'en' : 'zh'
+const lang = normalizeLocale(route.params.lang)
 locale.value = lang
 const currentLang = lang
 

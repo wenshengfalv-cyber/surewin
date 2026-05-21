@@ -1,0 +1,268 @@
+{
+  "site": {
+    "quote": "\"Công lý đến bằng tình yêu là đầu hàng; công lý đến bằng luật pháp là hình phạt\""
+  },
+  "meta": {
+    "title": "York Consulting - Bào chữa hình sự & Vi phạm giao thông",
+    "description": "Cung cấp dịch vụ pháp lý chuyên nghiệp cho bào chữa hình sự, DUI, vi phạm giao thông, bạo lực gia đình, lừa đảo và lái xe nguy hiểm tại Toronto.",
+    "keywords": "luật sư hình sự, luật sư DUI Toronto, vi phạm giao thông, bào chữa lái xe say rượu, dịch vụ pháp lý"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Chấm dứt bạo lực gia đình & DUI",
+        "subtitle": "Giải pháp một cửa cho vi phạm giao thông",
+        "description": "Chuyên môn xử lý vé phạt giao thông, bạo lực gia đình và DUI"
+      },
+      {
+        "title": "Bảo vệ pháp lý chuyên nghiệp",
+        "subtitle": "Bảo vệ quyền lợi của bạn",
+        "description": "20 năm kinh nghiệm cung cấp dịch vụ pháp lý xuất sắc"
+      }
+    ]
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "services": "Dịch vụ",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Liên hệ"
+  },
+  "intro": {
+    "paragraph": "Chúng tôi phục vụ nhiều khách hàng VVIP, bao gồm ông trùm bất động sản Leo, chủ 168 Sushi Ivan, những người ảnh hưởng trên TikTok, nhân viên bán ô tô sang Howard, chuyên gia bất động sản giàu kinh nghiệm và chủ Shengdi Realty Mike, nhà vô địch bảo hiểm nhân thọ hàng đầu Eric (Huisheng Finance), chủ EASY EDUCATION Jacky và phi công TikTok trẻ nhất Jeffrey. Chúng tôi cũng có thế mạnh đặc biệt trong xử lý vé phạt giao thông tại Alberta, Quebec và bang New York."
+  },
+  "whyChooseUs": {
+    "title": "Tại sao chọn chúng tôi",
+    "description": "Hãy chọn chúng tôi làm đại diện chuyên gia về luật giao thông. Đội ngũ giàu kinh nghiệm và tận tâm của chúng tôi cam kết giải quyết những phức tạp pháp lý và đảm bảo vụ việc của bạn đạt kết quả tốt nhất.",
+    "reasons": {
+      "legalExpertise": {
+        "title": "Chuyên môn pháp lý",
+        "desc": "Liên hệ với chúng tôi ngay để nhận tư vấn chuyên sâu..."
+      },
+      "yearsofExperience": {
+        "title": "Nhiều năm kinh nghiệm",
+        "desc": "Tin tưởng vào kiến thức chuyên môn của chúng tôi..."
+      },
+      "legalCertification": {
+        "title": "Chứng nhận pháp lý",
+        "desc": "Nhận chuyên môn đã được kiểm chứng của chúng tôi..."
+      }
+    }
+  },
+  "clients": {
+    "title": "Khách hàng có giá trị của chúng tôi",
+    "subtitle": "Chúng tôi phục vụ nhiều khách hàng nổi tiếng và VVIP trong nhiều ngành",
+    "anotherTitle": "Chuyên môn xuyên biên giới",
+    "description": "Công ty chúng tôi có lợi thế đặc biệt trong xử lý vé phạt giao thông ở nhiều khu vực pháp lý. Chúng tôi có thể xử lý cùng lúc các vụ việc tại Alberta, Quebec và bang New York - một năng lực rất hiếm trong ngành, thể hiện chuyên môn và tầm ảnh hưởng rộng lớn.",
+    "people": {
+      "Leo": "Ông trùm bất động sản",
+      "Ivan": "Chủ 168 Sushi",
+      "Howard": "Nhân viên bán xe sang",
+      "Mike": "Chuyên gia bất động sản",
+      "Eric": "Nhà vô địch bảo hiểm",
+      "Jacky": "Chủ doanh nghiệp giáo dục",
+      "Jeffrey": "Phi công TikTok trẻ nhất"
+    }
+  },
+  "services": {
+    "title": "Lĩnh vực hành nghề pháp lý",
+    "typesTitle": "Loại vụ án hình sự",
+    "items": {
+      "dui": {
+        "title": "DUI / Lái xe say rượu",
+        "desc": "Chúng tôi cung cấp tư vấn pháp lý chuyên nghiệp và dịch vụ bào chữa để giúp bạn đối phó với cáo buộc DUI và bảo vệ quyền lái xe cùng hồ sơ của bạn."
+      },
+      "domestic": {
+        "title": "Bạo lực gia đình / Tấn công",
+        "desc": "Khi đối mặt với cáo buộc bạo lực gia đình hoặc tấn công, chúng tôi cung cấp hỗ trợ pháp lý mạnh mẽ để bảo vệ quyền lợi và đạt được kết quả tốt nhất."
+      },
+      "theft": {
+        "title": "Trộm cắp nhỏ",
+        "desc": "Chúng tôi hiểu hậu quả của cáo buộc trộm cắp nhỏ và cố gắng đưa ra chiến lược bào chữa để bảo vệ uy tín và tương lai của bạn."
+      },
+      "dangerous": {
+        "title": "Lái xe nguy hiểm",
+        "desc": "Cáo buộc lái xe nguy hiểm có thể ảnh hưởng nghiêm trọng đến cuộc sống của bạn; đội ngũ pháp lý của chúng tôi cung cấp chiến lược bào chữa chuyên nghiệp để giảm thiểu tác động."
+      },
+      "fraud": {
+        "title": "Lừa đảo",
+        "desc": "Các vụ án lừa đảo thường phức tạp và yêu cầu chú ý đến chi tiết; chúng tôi sử dụng chuyên môn để cung cấp dịch vụ pháp lý toàn diện."
+      },
+      "mischief": {
+        "title": "Phá hoại",
+        "desc": "Với cáo buộc phá hoại, bạn cần cố vấn giàu kinh nghiệm để bảo vệ quyền lợi. Chúng tôi cung cấp phân tích pháp lý chi tiết và chiến lược bào chữa mạnh mẽ."
+      }
+    }
+  },
+  "team": {
+    "title": "Đội ngũ pháp lý đa dạng của chúng tôi",
+    "subtitle": "Đội ngũ pháp lý của chúng tôi gồm các chuyên gia đến từ nhiều nền tảng khác nhau, bao gồm trợ lý pháp lý và luật sư hình sự người bản địa, người Do Thái và người Ireland-Canada. Các thành viên này không chỉ có kiến thức pháp lý sâu rộng mà còn mang theo kinh nghiệm quý giá từ các cựu sĩ quan OPP, cảnh sát, công tố viên và thẩm phán. Bối cảnh đa dạng này giúp đội ngũ chúng tôi xử lý nhiều loại vụ việc một cách thành thạo.",
+    "members": {
+      "criminalLawyers": {
+        "title": "Luật sư hình sự",
+        "desc": "Có kinh nghiệm trong bào chữa hình sự"
+      },
+      "trafficLaw": {
+        "title": "Luật giao thông",
+        "desc": "Chuyên gia về vé phạt giao thông"
+      },
+      "lawEnforcement": {
+        "title": "Cơ quan thực thi pháp luật",
+        "desc": "Cựu OPP, cảnh sát, công tố viên"
+      }
+    }
+  },
+  "traffic": {
+    "title": "Vi phạm giao thông",
+    "items": {
+      "speed": {
+        "title": "Vượt tốc độ",
+        "desc": "Vì sao bạn nên phản đối vé phạt tốc độ.",
+        "detail": "Nhiều người lái xe thấy dễ dàng nộp phạt thay vì tranh chấp. Tuy nhiên với vi phạm vượt tốc độ, chi phí thực sự còn vượt xa số tiền phạt. Ngoài tác động tài chính trực tiếp như điểm phạt ảnh hưởng hồ sơ lái xe, còn có gánh nặng lâu dài là phí bảo hiểm tăng trong ít nhất ba năm. Nếu bạn chọn nhận tội và nộp phạt mà không xét đến hậu quả rộng hơn, chi phí thực sự sẽ còn phức tạp hơn nhiều."
+      },
+      "sign": {
+        "title": "Không chấp hành biển báo",
+        "desc": "Vi phạm biển báo đỗ xe hoặc dừng có thể bị xử phạt.",
+        "detail": "Dù vi phạm này có vẻ nhỏ, các hình phạt có thể để lại tác động lâu dài, ảnh hưởng hồ sơ lái xe ít nhất ba năm và có thể dẫn đến phí bảo hiểm tăng. Chúng tôi có 25 năm kinh nghiệm trong lĩnh vực này. Đừng chỉ nộp phạt hoặc tự cố gắng đối chất một mình ở tòa. Hình phạt: 3 điểm phạt, Số tiền phạt: $85.00, Kết án: Hồ sơ lái xe của bạn sẽ có kết án trong 3 năm."
+      },
+      "handheld": {
+        "title": "Thiết bị cầm tay",
+        "desc": "Kết án vì sử dụng thiết bị cầm tay hoặc thiết bị giải trí có thể gây hậu quả.",
+        "detail": "Kết án vì sử dụng thiết bị truyền thông không dây cầm tay hoặc thiết bị giải trí điện tử có thể khiến phí bảo hiểm của bạn tăng mạnh, thậm chí có thể dẫn đến việc tước bằng lái. Các cáo buộc sử dụng thiết bị không dây cầm tay bao gồm bất kỳ tương tác, cầm nắm hoặc sử dụng thiết bị trong khi lái xe, ngoại trừ cuộc gọi khẩn cấp, kể cả khi xe đang dừng chờ đèn đỏ hoặc biển dừng. Tương tự, các cáo buộc về thiết bị giải trí điện tử cầm tay bao gồm máy nghe nhạc MP3 hoặc DVD, tivi và máy tính."
+      },
+      "seatbelt": {
+        "title": "Vi phạm dây an toàn",
+        "desc": "Phạt vi phạm dây an toàn thường là $200.00.",
+        "detail": "Đối với người giữ bằng G tại Ontario: Mức phạt từ 500 đến 1.000 đô la cho lần vi phạm đầu tiên và tạm giữ bằng 3 ngày, đến 500 - 3.000 đô la cho lần vi phạm thứ ba trở lên và tạm giữ bằng 30 ngày. Người mới lái phải chịu mức phạt tăng dần. Bất kỳ kết án nào về vi phạm dây an toàn sẽ tồn tại trên hồ sơ lái xe của bạn trong ba năm. Không thắt dây an toàn khi lái xe hoặc khi là hành khách sẽ không bị trừ điểm. Tuy nhiên, mọi vi phạm dây an toàn khác sẽ bị trừ hai điểm vào bằng lái."
+      },
+      "suspension": {
+        "title": "Tạm giữ giấy phép",
+        "desc": "Tại Ontario, bạn có thể mất quyền lái xe theo nhiều cách.",
+        "detail": "Khi nào giấy phép của bạn có thể bị tạm giữ? Giấy phép của bạn có thể bị đình chỉ vì nhiều lý do, bao gồm: không thanh toán vé phạt hoặc tiền phạt, hành vi hình sự liên quan đến rượu, lý do y tế và điểm phạt. Hiện nay, chi phí lái xe khi bị đình chỉ có thể còn cao hơn cả giá trị bằng lái. Từ ngày 1/12/2010, cảnh sát có thêm công cụ để loại bỏ người lái xe bị đình chỉ và bị thương khỏi đường. Việc tịch thu xe 7 ngày áp dụng cho người lái xe có giấy phép bị đình chỉ. Bị kết án vì lái xe trong thời gian bị đình chỉ có thể ảnh hưởng đến bảo hiểm của bạn ít nhất ba năm."
+      },
+      "noInsurance": {
+        "title": "Không có bảo hiểm",
+        "desc": "Một bản án có thể dẫn đến hậu quả nghiêm trọng bao gồm tước bằng tự động.",
+        "detail": "Khi bị kết án, bạn sẽ đối mặt với hậu quả nghiêm trọng bao gồm việc tước bằng lái tự động sáu tháng, tiền phạt lên đến 50.000 đô la và khả năng tăng đáng kể phí bảo hiểm hàng năm (lên đến hàng nghìn đô la). Tại Ontario, bạn có thể mất quyền lái xe theo nhiều cách. Đừng chỉ nộp phạt hoặc cố gắng tự mình tranh cãi. Chúng tôi có thể hỗ trợ bạn. Cam kết của chúng tôi là theo đuổi loại bỏ hoàn toàn cáo buộc. Nếu không thể loại bỏ hoàn toàn, chúng tôi sẽ làm việc để giảm nhẹ cáo buộc và giảm thiểu tác động."
+      }
+    },
+    "cta": {
+      "title": "Chúng tôi có thể giúp bạn",
+      "description": "Liên hệ với chúng tôi hôm nay để nhận tư vấn miễn phí về vụ việc vi phạm giao thông của bạn.",
+      "button": "Nhận báo giá miễn phí"
+    }
+  },
+  "faq": {
+    "title": "Các câu hỏi thường gặp",
+    "subtitle": "Các câu trả lời cho những câu hỏi phổ biến về dịch vụ bào chữa hình sự của chúng tôi",
+    "cta": {
+      "title": "Vẫn còn thắc mắc?",
+      "description": "Liên hệ với chúng tôi hôm nay để nhận tư vấn miễn phí về vụ việc của bạn.",
+      "wechat": "WeChat: "
+    },
+    "desc": "Dưới đây là câu trả lời cho một số câu hỏi thường gặp về dịch vụ bào chữa hình sự do luật sư và đồng nghiệp của chúng tôi cung cấp. Nếu bạn có câu hỏi khác, xin vui lòng gọi để thảo luận về trường hợp cụ thể của bạn."
+  },
+  "recent": {
+    "title": "Nghiên cứu vụ án gần đây"
+  },
+  "common": {
+    "legalServices": "Dịch vụ pháp lý",
+    "toggleLang": "Ngôn ngữ",
+    "phone": "Điện thoại",
+    "address": "Địa chỉ",
+    "home": "Trang chủ",
+    "blogs": "Blog",
+    "available247": "Luôn hoạt động 24/7",
+    "contactInfo": "Thông tin liên hệ",
+    "reachOut": "Liên hệ với chúng tôi qua bất kỳ kênh nào sau",
+    "available": "Sẵn sàng 24/7",
+    "wechat": "WeChat",
+    "preferred": "Ưu tiên cho khách hàng Trung Quốc",
+    "officeAddress": "Địa chỉ văn phòng",
+    "officeHours": "Giờ làm việc",
+    "monFri": "Thứ Hai - Thứ Sáu: 9:00 AM - 6:00 PM",
+    "satSun": "Thứ Bảy - Chủ Nhật: Theo hẹn",
+    "ourLocation": "Vị trí của chúng tôi",
+    "findMap": "Tìm bản đồ",
+    "aboutUs": "Giới thiệu",
+    "welcome": "Chào mừng đến với York Consulting",
+    "faq": "FAQ",
+    "frequentlyAsked": "Các câu hỏi thường gặp",
+    "contactUs": "Liên hệ",
+    "blogNotFound": "Không tìm thấy bài viết",
+    "general": "Chung",
+    "learnMore": "Tìm hiểu thêm →",
+    "readMore": "Đọc thêm"
+  },
+  "blogs": {
+    "title": "Những hiểu biết và cập nhật pháp lý",
+    "desc": "Cập nhật về luật hình sự, vi phạm giao thông và chiến lược bào chữa pháp lý",
+    "relatedArticles": "Bài viết liên quan",
+    "willAppear": "Các bài viết liên quan sẽ xuất hiện ở đây",
+    "shareThisArticle": "Chia sẻ bài viết này",
+    "showAll": "Hiển thị tất cả bài viết"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "desc": "Liên hệ với đội ngũ pháp lý giàu kinh nghiệm của chúng tôi. Chúng tôi ở đây để cung cấp hướng dẫn chuyên nghiệp cho vụ việc của bạn.",
+    "freeConsultation": "Tư vấn miễn phí",
+    "discussCase": "Liên hệ với chúng tôi hôm nay để thảo luận về vụ việc của bạn",
+    "yourName": "Tên của bạn *",
+    "yourEmail": "Email của bạn *",
+    "yourPhone": "Số điện thoại của bạn *",
+    "subject": "Chủ đề",
+    "message": "Nội dung *",
+    "submit": "Gửi ngay",
+    "submitting": "Đang gửi...",
+    "thankYou": "Cảm ơn bạn! Chúng tôi sẽ liên hệ với bạn sớm.",
+    "form": {
+      "name": "Tên*",
+      "email": "Email *",
+      "phone": "Điện thoại*",
+      "subject": "Chủ đề",
+      "message": "Nội dung",
+      "submit": "Gửi ngay"
+    }
+  },
+  "stats": {
+    "years": "20 năm",
+    "cases": "Kinh nghiệm nhiều loại vụ án",
+    "freeConsult": "Tư vấn miễn phí",
+    "trust": "Niềm tin & Sự hài lòng",
+    "completed": "Hoàn thành",
+    "happyClients": "Khách hàng hài lòng",
+    "wins": "Thắng lợi",
+    "team": "Thành viên đội ngũ"
+  },
+  "news": {
+    "title": "Tin mới nhất"
+  },
+  "subscribe": {
+    "title": "Giữ liên lạc",
+    "label": "Địa chỉ email",
+    "button": "Đăng ký"
+  },
+  "leaderStory": {
+    "title": "Câu chuyện của Johnny",
+    "intro": "Chào mừng đến với York Consulting, một đội ngũ chuyên gia giàu kinh nghiệm và đa dạng cam kết cung cấp dịch vụ pháp lý chất lượng cao nhất cho bạn. Lãnh đạo đội ngũ của chúng tôi, Johnny, đã chuyển đến Toronto vào năm 1995 và tốt nghiệp Đại học Toronto.",
+    "experience": "Với nhiều năm tham gia sâu rộng vào lĩnh vực bảo hiểm, Johnny hiểu được tác động sâu sắc của hồ sơ hình sự và giao thông lên phí bảo hiểm. Chuyên môn và kinh nghiệm quý báu của ông là sức mạnh cốt lõi của đội ngũ chúng tôi.",
+    "practiceAreas": "Lĩnh vực hành nghề",
+    "criminalLaw": "Luật hình sự",
+    "trafficLaw": "Luật giao thông",
+    "familyLaw": "Luật gia đình",
+    "contact": "Nếu bạn muốn biết về quy định giao thông và các mức phạt, điểm phạt liên quan, hoặc nếu bạn đã nhận vé, hãy liên hệ với chúng tôi qua WeChat: wenshenglegal"
+  },
+  "caseGallery": {
+    "title": "Bộ sưu tập vụ án của chúng tôi",
+    "description": "Xem các vụ án thành công và phản hồi của khách hàng. Nhấp vào bất kỳ hình ảnh nào để xem toàn màn hình.",
+    "keyboardShortcut": "Sử dụng phím mũi tên ← → để điều hướng • ESC để đóng • Nhấp để phóng to hình ảnh",
+    "zoomIn": "Phóng to",
+    "zoomOut": "Thu nhỏ"
+  },
+  "footer": {
+    "companyName": "York Consulting",
+    "description": "Dịch vụ pháp lý chuyên nghiệp cho vi phạm giao thông và bào chữa hình sự.",
+    "rights": "Bảo lưu mọi quyền."
+  }
+}

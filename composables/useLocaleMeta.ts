@@ -1,6 +1,7 @@
 import { useI18n } from 'vue-i18n'
 import { useHead } from '#app'
 import { watch } from 'vue'
+import { normalizeLocale } from '~/composables/useLocales'
 
 export const useLocaleMeta = () => {
   const { locale } = useI18n()
@@ -23,11 +24,29 @@ export const useLocaleMeta = () => {
       ogDescription: '专业的刑事辩护、醉驾、交通违规等法律代理服务，服务多伦多地区。',
       lang: 'zh',
       ogLocale: 'zh_CN'
+    },
+    ko: {
+      title: 'York Consulting - 형사 변호 및 교통 위반',
+      description: '토론토에서 형사 변호, DUI, 교통 위반, 가정 폭력, 사기 및 위험 운전 사례에 대한 전문 법률 서비스를 제공합니다.',
+      keywords: '형사 변호사, DUI 변호사 토론토, 교통 위반, 음주 운전 변호, 법률 서비스',
+      ogTitle: 'York Consulting - 전문 법률 서비스',
+      ogDescription: '토론토에서 형사 변호, DUI 및 교통 위반에 대한 전문 법률 서비스를 제공합니다.',
+      lang: 'ko',
+      ogLocale: 'ko_KR'
+    },
+    vi: {
+      title: 'York Consulting - Bào chữa hình sự & Vi phạm giao thông',
+      description: 'Cung cấp dịch vụ pháp lý chuyên nghiệp cho bào chữa hình sự, DUI, vi phạm giao thông, bạo lực gia đình, lừa đảo và lái xe nguy hiểm tại Toronto.',
+      keywords: 'luật sư hình sự, luật sư DUI Toronto, vi phạm giao thông, bào chữa lái xe say rượu, dịch vụ pháp lý',
+      ogTitle: 'York Consulting - Dịch vụ pháp lý chuyên nghiệp',
+      ogDescription: 'Cung cấp dịch vụ pháp lý chuyên nghiệp cho hình sự, DUI và vi phạm giao thông tại Toronto.',
+      lang: 'vi',
+      ogLocale: 'vi_VN'
     }
   }
 
   const updateMeta = () => {
-    const currentLocale = locale.value as 'en' | 'zh'
+    const currentLocale = normalizeLocale(locale.value)
     const meta = metaData[currentLocale]
 
     useHead({
