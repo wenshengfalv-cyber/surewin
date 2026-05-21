@@ -25,8 +25,8 @@
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "services": "Dịch vụ",
-    "blog": "Blog",
-    "faq": "FAQ",
+    "blog": "Bài viết",
+    "faq": "Câu hỏi thường gặp",
     "contact": "Liên hệ"
   },
   "intro": {
@@ -172,7 +172,7 @@
     "phone": "Điện thoại",
     "address": "Địa chỉ",
     "home": "Trang chủ",
-    "blogs": "Blog",
+    "blogs": "Bài viết",
     "available247": "Luôn hoạt động 24/7",
     "contactInfo": "Thông tin liên hệ",
     "reachOut": "Liên hệ với chúng tôi qua bất kỳ kênh nào sau",
@@ -187,7 +187,7 @@
     "findMap": "Tìm bản đồ",
     "aboutUs": "Giới thiệu",
     "welcome": "Chào mừng đến với York Consulting",
-    "faq": "FAQ",
+    "faq": "Câu hỏi thường gặp",
     "frequentlyAsked": "Các câu hỏi thường gặp",
     "contactUs": "Liên hệ",
     "blogNotFound": "Không tìm thấy bài viết",
