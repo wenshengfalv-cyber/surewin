@@ -47,6 +47,11 @@ const isLinkActive = (path) => {
   return route.path.startsWith(`/${locale.value}${path}`)
 }
 
+const languageButtonClass = (code) =>
+  code === locale.value
+    ? 'bg-blue-900 text-white shadow-sm'
+    : 'bg-blue-100 text-blue-900 hover:bg-blue-200'
+
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
 }
@@ -84,16 +89,13 @@ const closeMobileMenu = () => {
         <!-- Language Switcher & Phone & Mobile Menu Button -->
         <div class="flex items-center space-x-3">
           <div class="hidden sm:flex items-center space-x-2">
-            <span class="px-3 py-1 text-sm font-medium rounded-md bg-blue-50 text-blue-900">
-              {{ t('common.toggleLang') }}
-            </span>
             <div class="flex items-center space-x-2">
               <NuxtLink
                 v-for="link in languageLinks"
                 :key="link.code"
                 :to="link.to"
                 class="px-3 py-1 text-sm font-medium rounded-md transition-colors"
-                :class="link.code === locale.value ? 'bg-blue-900 text-white' : 'bg-blue-100 text-blue-900 hover:bg-blue-200'"
+                :class="languageButtonClass(link.code)"
               >
                 {{ link.name }}
               </NuxtLink>
@@ -148,7 +150,8 @@ const closeMobileMenu = () => {
               v-for="link in languageLinks"
               :key="link.code"
               :to="link.to"
-              class="inline-flex items-center justify-center rounded-md bg-blue-100 px-3 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 transition-colors"
+              class="inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition-colors"
+              :class="languageButtonClass(link.code)"
               @click="closeMobileMenu"
             >
               {{ link.name }}
