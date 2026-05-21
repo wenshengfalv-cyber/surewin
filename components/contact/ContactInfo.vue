@@ -110,7 +110,7 @@ const { t } = useI18n()
         </div>
 
         <!-- Google Map -->
-        <div>
+        <!-- <div>
           <h2 class="text-4xl font-bold text-gray-900 mb-4">
             {{ t('common.ourLocation') }}
           </h2>
@@ -128,7 +128,7 @@ const { t } = useI18n()
             >
             </iframe>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
