@@ -1,6 +1,6 @@
 import { useI18n } from 'vue-i18n'
 import { useHead } from '#app'
-import { watch } from 'vue'
+import { computed } from 'vue'
 import { normalizeLocale } from '~/composables/useLocales'
 
 export const useLocaleMeta = () => {
@@ -45,11 +45,12 @@ export const useLocaleMeta = () => {
     }
   }
 
-  const updateMeta = () => {
-    const currentLocale = normalizeLocale(locale.value)
-    const meta = metaData[currentLocale]
+  const currentLocale = computed<keyof typeof metaData>(() => normalizeLocale(locale.value) as keyof typeof metaData)
 
-    useHead({
+  useHead(() => {
+    const meta = metaData[currentLocale.value]
+
+    return {
       htmlAttrs: {
         lang: meta.lang
       },
@@ -60,20 +61,8 @@ export const useLocaleMeta = () => {
         { property: 'og:title', content: meta.ogTitle },
         { property: 'og:description', content: meta.ogDescription },
         { property: 'og:locale', content: meta.ogLocale },
-        { property: 'og:locale:alternate', content: currentLocale === 'en' ? 'zh_CN' : 'en_CA' }
+        { property: 'og:locale:alternate', content: currentLocale.value === 'en' ? 'zh_CN' : 'en_CA' }
       ]
-    })
-  }
-
-  // Update meta on initial load
-  updateMeta()
-
-  // Watch for locale changes and update meta accordingly
-  watch(locale, () => {
-    updateMeta()
+    }
   })
-
-  return {
-    updateMeta
-  }
 }
