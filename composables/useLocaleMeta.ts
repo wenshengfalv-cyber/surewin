@@ -8,10 +8,10 @@ export const useLocaleMeta = () => {
 
   const metaData = {
     en: {
-      title: 'York Consulting - Criminal Defense & Traffic Violations',
+      title: 'Surewin - Criminal Defense & Traffic Violations',
       description: 'Expert legal representation for criminal defense, DUI, traffic violations, impaired driving, domestic violence, assault, fraud, and dangerous driving cases in Toronto.',
       keywords: 'criminal defense lawyer, DUI lawyer Toronto, traffic violations, impaired driving defense, domestic violence lawyer, assault defense, fraud cases, dangerous driving, legal services Toronto, traffic ticket defense, criminal law attorney',
-      ogTitle: 'York Consulting - Professional Legal Services',
+      ogTitle: 'Surewin - Professional Legal Services',
       ogDescription: 'Expert legal representation for criminal defense, DUI, traffic violations, and more in Toronto.',
       lang: 'en',
       ogLocale: 'en_CA'
@@ -26,19 +26,19 @@ export const useLocaleMeta = () => {
       ogLocale: 'zh_CN'
     },
     ko: {
-      title: 'York Consulting - 형사 변호 및 교통 위반',
+      title: 'Surewin - 형사 변호 및 교통 위반',
       description: '토론토에서 형사 변호, DUI, 교통 위반, 가정 폭력, 사기 및 위험 운전 사례에 대한 전문 법률 서비스를 제공합니다.',
       keywords: '형사 변호사, DUI 변호사 토론토, 교통 위반, 음주 운전 변호, 법률 서비스',
-      ogTitle: 'York Consulting - 전문 법률 서비스',
+      ogTitle: 'Surewin - 전문 법률 서비스',
       ogDescription: '토론토에서 형사 변호, DUI 및 교통 위반에 대한 전문 법률 서비스를 제공합니다.',
       lang: 'ko',
       ogLocale: 'ko_KR'
     },
     vi: {
-      title: 'York Consulting - Bào chữa hình sự & Vi phạm giao thông',
+      title: 'Surewin - Bào chữa hình sự & Vi phạm giao thông',
       description: 'Cung cấp dịch vụ pháp lý chuyên nghiệp cho bào chữa hình sự, DUI, vi phạm giao thông, bạo lực gia đình, lừa đảo và lái xe nguy hiểm tại Toronto.',
       keywords: 'luật sư hình sự, luật sư DUI Toronto, vi phạm giao thông, bào chữa lái xe say rượu, dịch vụ pháp lý',
-      ogTitle: 'York Consulting - Dịch vụ pháp lý chuyên nghiệp',
+      ogTitle: 'Surewin - Dịch vụ pháp lý chuyên nghiệp',
       ogDescription: 'Cung cấp dịch vụ pháp lý chuyên nghiệp cho hình sự, DUI và vi phạm giao thông tại Toronto.',
       lang: 'vi',
       ogLocale: 'vi_VN'

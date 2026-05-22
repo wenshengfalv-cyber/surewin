@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en' // Default language, will be updated dynamically
       },
-      title: 'York Consulting',
+      title: 'Surewin',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         
         // Open Graph / Social Media
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'York Consulting - Professional Legal Services' },
+        { property: 'og:title', content: 'Surewin - Professional Legal Services' },
         { property: 'og:description', content: 'Expert legal representation for criminal defense, DUI, traffic violations, and more.' },
         { property: 'og:image', content: '/og-image.png' },
         
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
         
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'York Consulting - Professional Legal Services' },
+        { name: 'twitter:title', content: 'Surewin - Professional Legal Services' },
         { name: 'twitter:description', content: 'Expert legal representation for criminal defense, DUI, traffic violations, and more.' },
       ],
       link:[
